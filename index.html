@@ -1066,8 +1066,8 @@ body.bb-body{
 .bb-chip.on{border-color:var(--bb-red);background:var(--bb-red);color:#fff;}
 /* 모바일: 유종 칩 6개 한 줄 (기본 규칙 뒤에 둬서 우선 적용) */
 @media(max-width:560px){
-  .bb-fuels{flex-wrap:nowrap;gap:4px;justify-content:space-between;}
-  .bb-chip{padding:10px 7px;font-size:13.5px;white-space:nowrap;}
+  .bb-fuels{flex-wrap:nowrap;gap:4px;}
+  .bb-chip{flex:1 1 auto;padding:10px 4px;font-size:13.5px;white-space:nowrap;text-align:center;}
 }
 
 /* ---------------- results ---------------- */
@@ -1098,8 +1098,8 @@ body.bb-body{
 .bb-tag.fuel{background:var(--bb-red-soft);color:var(--bb-red-strong);}
 @media(max-width:560px){
   .bb-top{padding:22px 18px 20px;}
-  .bb-top h1{font-size:19px;margin:14px 0 6px;line-height:1.3;}
-  .bb-top .sub{font-size:13px;}
+  .bb-top h1{font-size:5.7vw;margin:14px 0 6px;line-height:1.3;}
+  .bb-top .sub{font-size:14px;}
   .bb-search input{font-size:13.5px;padding:0 14px 0 44px;}
   .bb-card{padding:16px 15px;}
   .bb-card .chead{gap:6px;}
@@ -3008,7 +3008,7 @@ function App(){
         React.createElement("div", { className:"bb-search" },
           React.createElement("span", { className:"ic" }, React.createElement(SearchIcon)),
           React.createElement("input", {
-            type:"text", value:query, placeholder:"차종 · 모델명 · 규격으로 검색 (예: 그랜저, K5, DIN74L)",
+            type:"text", value:query, placeholder:"차종/모델명/규격으로 검색(예: 그랜저, K5, GB80L)",
             onChange:e=>setQuery(e.target.value), "aria-label":"검색"
           }),
           query ? React.createElement("button", { className:"clr", onClick:()=>setQuery(""), "aria-label":"지우기" }, "✕") : null
