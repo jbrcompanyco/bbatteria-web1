@@ -960,19 +960,19 @@ body.bb-body{
 .bb-top .row{display:flex;align-items:center;gap:14px;}
 .bb-top .logo{height:30px;width:auto;}
 .bb-top .badge-pill{
-  margin-left:auto;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
   background:rgba(255,255,255,.12);border-radius:9999px;padding:7px 14px;
   font-size:12.5px;font-weight:600;color:rgba(255,255,255,.82);
 }
 .bb-top .badge-pill .dot{width:7px;height:7px;border-radius:50%;background:#39D353;}
 .bb-top h1{
   margin:18px 0 6px;font-size:27px;font-weight:800;letter-spacing:-.02em;line-height:1.28;
-  text-align:center;word-break:keep-all;
+  text-align:left;word-break:keep-all;
 }
 .bb-top h1 .red{color:#FF6A6A;}
 .bb-top .sub{
   font-size:14px;font-weight:500;color:rgba(255,255,255,.66);line-height:1.6;
-  text-align:center;word-break:keep-all;
+  text-align:left;word-break:keep-all;
 }
 
 /* ---------------- panel ---------------- */
@@ -1038,10 +1038,6 @@ body.bb-body{
 .bb-selects > .bb-field:last-child{flex:1;}
 @media(max-width:560px){ .bb-selects > .bb-field:first-child{flex:1;} }
 .bb-fuels{flex-wrap:nowrap;}
-@media(max-width:560px){
-  .bb-fuels{flex-wrap:nowrap;gap:4px;justify-content:space-between;}
-  .bb-chip{padding:7px 8px;font-size:12px;white-space:nowrap;}
-}
 .bb-field .lab{font-size:12px;font-weight:700;color:rgba(55,56,60,.61);margin-bottom:6px;display:block;}
 .bb-select{
   position:relative;width:100%;
@@ -1068,6 +1064,11 @@ body.bb-body{
 }
 .bb-chip:hover{border-color:rgba(112,115,124,.4);}
 .bb-chip.on{border-color:var(--bb-red);background:var(--bb-red);color:#fff;}
+/* 모바일: 유종 칩 6개 한 줄 (기본 규칙 뒤에 둬서 우선 적용) */
+@media(max-width:560px){
+  .bb-fuels{flex-wrap:nowrap;gap:4px;justify-content:space-between;}
+  .bb-chip{padding:7px 7px;font-size:12px;white-space:nowrap;}
+}
 
 /* ---------------- results ---------------- */
 .bb-results{margin:18px 20px 0;}
