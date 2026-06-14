@@ -1056,8 +1056,9 @@ body.bb-body{
 }
 
 /* fuel chips */
-.bb-fuels{display:flex;flex-wrap:wrap;gap:7px;}
+.bb-fuels{display:flex;flex-wrap:nowrap;gap:7px;}
 .bb-chip{
+  flex:1 1 auto;text-align:center;
   border:1.5px solid rgba(112,115,124,.22);background:#fff;border-radius:9999px;
   padding:8px 15px;font-size:13.5px;font-weight:700;color:rgba(55,56,60,.7);
   cursor:pointer;font-family:inherit;transition:all .12s;
