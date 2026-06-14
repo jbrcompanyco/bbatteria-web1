@@ -1,0 +1,22 @@
+# 이미지 파일
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+
+# 압축 파일
+*.zip
+*.rar
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Node modules (필요시)
+node_modules/
