@@ -982,7 +982,7 @@ body.bb-body{
   content:"";position:absolute;left:-20px;right:-20px;top:-18px;bottom:-12px;
   background:#EDEEF0;z-index:-1;
 }
-@media(max-width:560px){ .bb-panel{margin:14px 12px 0;padding:20px 16px 22px;} }
+@media(max-width:560px){ .bb-panel{margin:14px 12px 0;padding:20px 16px 22px;position:static;} }
 
 .bb-step-label{
   display:flex;align-items:center;gap:9px;margin-bottom:13px;
@@ -1885,6 +1885,12 @@ function useTabsStyles() {
     background:var(--label-strong); border-radius:2px; }
   .wt-tab:disabled{ color:var(--label-disable); cursor:not-allowed; }
   .wt-tabs--small .wt-tab{ padding:9px 12px; font-size:var(--label1-size); }
+  @media(max-width:560px){
+    .wt-tabs{ overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+    .wt-tabs::-webkit-scrollbar{ display:none; }
+    .wt-tabs--fill .wt-tab{ flex:0 0 auto; }
+    .wt-tab{ padding:12px 11px; }
+  }
   `;
   const el = document.createElement("style");
   el.id = "wt-tabs-styles";
