@@ -3023,7 +3023,7 @@ function App(){
           React.createElement("div", { className:"bb-field" },
             React.createElement("label", { className:"lab" }, "차종"),
             React.createElement("div", { className:"bb-select" },
-              React.createElement("select", { value:carType, onChange:e=>setCarType(e.target.value) },
+              React.createElement("select", { value:carType, onChange:e=>setCarType(e.target.value), onBlur:e=>setCarType(e.target.value) },
                 React.createElement("option", { value:"all" }, "전체 차종"),
                 carTypes.map(c=>React.createElement("option", { key:c, value:c }, c))
               )
