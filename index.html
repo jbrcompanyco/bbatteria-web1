@@ -940,7 +940,9 @@ body.wt-body {
 }
 
 *{box-sizing:border-box;}
-html,body{margin:0;padding:0;}
+/* 가로 스크롤 차단: 실제 스크롤 컨테이너인 html에 직접 적용(일부 브라우저는 body의 clip을 무시함).
+   hidden은 모든 브라우저 지원 → 오른쪽으로 넘치는 배경/요소를 잘라냄. */
+html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden;}
 body.bb-body{
   background:#EDEEF0;overflow-x:clip;
   font-family:"Pretendard JP Variable","Pretendard JP",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
