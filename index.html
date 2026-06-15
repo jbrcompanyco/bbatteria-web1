@@ -986,7 +986,11 @@ body.bb-body{
   content:"";position:absolute;left:-20px;right:-20px;top:-18px;bottom:-12px;
   background:#EDEEF0;z-index:-1;
 }
-@media(max-width:560px){ .bb-panel{margin:14px 8px 0;padding:20px 12px 22px;position:static;} }
+@media(max-width:560px){
+  .bb-panel{margin:14px 8px 0;padding:20px 12px 22px;position:static;}
+  /* sticky 마스크용 가상요소는 모바일(static)에서 뷰포트 밖으로 삐져나가 가로 스크롤을 만들므로 끔 */
+  .bb-panel::before{display:none;}
+}
 
 .bb-step-label{
   display:flex;align-items:center;gap:9px;margin-bottom:13px;
